@@ -1,17 +1,17 @@
 # Data Science Examples
 
-All code written by Oliver Morris, except where expressly referenced to other authors.
-These examples show how Deep Learning can be applied to investigate financial and performance management issues in SME's.
-The list of myt code examples is not exhaustive, especially not for Caret in R (ie Statistical Learning as opposed to Machine Learning)
+All code written by Oliver Morris, except where expressly referenced to other authors. 
+These examples show how Deep Learning can be applied to investigate financial and performance management issues in SME's. 
+The list of myt code examples is not exhaustive, especially not for Caret in R (ie Statistical Learning as opposed to Machine Learning) 
 However, it is a useful oversight of common tools and a code resource for myself
 
 ## Examples of work
 
 | Project Name & Code Link                                                                                                                          | Language   | ML Package     | Techniques                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|------------|----------------|------------------------------------------------------------------------|
-| [Parts Forecasting SimpleModels](https://github.com/olimoz/DataScienceExamples/blob/master/Parts_Forecasting_SimpleModels.pdf)                    | R          | Caret          | GLM, Treebag, XGBoost                                                  |
-| [Parts Forecasting Deep](https://github.com/olimoz/DataScienceExamples/blob/master/Parts_Forecasting_Deep.pdf)                    	            | R & Python | Keras in Python| Wavenet (causal dilated 1dconv)                                        |
 | [Parts Forecasting Exploration](https://github.com/olimoz/DataScienceExamples/blob/master/Parts_Forecasting_Exploration.pdf)                      | R          | Keras in R     | Timeseries, ARIMA, TScount, Clustering (wavelet, dtw etc), Word2Vec    |
+| [Parts Forecasting, Statistical Models](https://github.com/olimoz/DataScienceExamples/blob/master/Parts_Forecasting_SimpleModels.pdf)             | R          | Caret          | GLM, Treebag, XGBoost                                                  |
+| [Parts Forecasting, Deep Learning](https://github.com/olimoz/DataScienceExamples/blob/master/Parts_Forecasting_Deep.pdf)                    	    | R & Python | Keras in Python| Wavenet (causal dilated 1dconv)                                        |
 | [Cash Flow Modelling](https://github.com/olimoz/DataScienceExamples/blob/master/Cash_Flow_Deep.pdf)                            		    | R & Python | Keras in Python| LSTM, Wavenet (causal dilated 1dconv), SQL                             |
 | [Accounting Anomaly Detection](https://github.com/olimoz/DataScienceExamples/blob/master/AcctgAnomaly_forPublication.Rmd)                         | R & Python | Keras in Python| Anomaly Detection for FCA compliance. Works really well!               |
 | [Washout Chain Modelling](https://github.com/olimoz/DataScienceExamples/blob/master/Washout_Chain_Modelling.pdf)              	            | Python     | Keras          | XBRL data download, RegEx, Wrangling! Variational Autoencoder in Keras |
@@ -30,4 +30,3 @@ However, it is a useful oversight of common tools and a code resource for myself
 | [USA Company Finances, LSTM on Latents](https://github.com/olimoz/DataScienceExamples/blob/master/SEC_Step3_LSTM_on_latents_of_sequential_data.py)| Python     | TF2            | LSTM on Latents. Work ceased, results incomplete.                      |
 | [CNN Street Number Data Exploration](https://github.com/olimoz/DataScienceExamples/blob/master/CNN_StreetNumber_DataExploration.pdf)              | R          | N/A            | Working with images in R                                               |
 | [CNN Street Number Published Model](https://github.com/olimoz/DataScienceExamples/blob/master/CNN_StreetNumber_PublishedModel.pdf)                | R          | TF1            | Tensorflow 1. 7 layer CNN, classification                              |
-
