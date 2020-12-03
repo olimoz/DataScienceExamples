@@ -1,7 +1,8 @@
 # Data Science Examples
 
+All code written by Oliver Morris, except where expressly referenced to other authors.
 These examples show how Deep Learning can be applied to investigate financial and performance management issues in SME's.
-The list is not exhaustive, especially not for Caret in R (ie Statistical Learning as opposed to Machine Learning)
+The list of myt code examples is not exhaustive, especially not for Caret in R (ie Statistical Learning as opposed to Machine Learning)
 However, it is a useful oversight of common tools and a code resource for myself
 
 ## Examples of work
