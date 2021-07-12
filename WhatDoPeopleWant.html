@@ -14289,16 +14289,64 @@ a.anchor-link {
 <p>He admits that these 'insatiable' desires appear ethically neutral at best. He does not deny that more altruistic motivations exist, such as compassion, but that they are less powerful.</p>
 <p>What would Machine Learning tools find if asked to trawl Wikipedia for its millions of references to wishes, wants and desires? In its descriptions of lives and history Wikipedia promises fertile territory for Russel's 'insatiable' desires. This is in contrast to data sources such as tweets and facebook, which may over represent the satiable desires.</p>
 <p>We do not expect an answer more intelligent than that offered by the Nobel prize winning philosopher. However, it would be fascinating to see what objective mathematical tools cause to fall out of the data, without the preconceptions of a human being.</p>
-<h2 id="Desires-are-not-Emotions">Desires are not Emotions<a class="anchor-link" href="#Desires-are-not-Emotions">&#182;</a></h2><p>Of course, there is already a lot of research into this area. A good starting place is to understand that desires are not classed as emotions. Consider Plutchiks wheel of emotion, this is often shown as Plutchiks dyads, which expands the fundamental emotions into emotions comprised of mixes of others, like a colour wheel. Desires are expressions of emotion, their result not their cause. This is not strictly sentiment analysis.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Approaches">Approaches<a class="anchor-link" href="#Approaches">&#182;</a></h2><p>The first step will be acquire the data, which is discussed in a following markdown chunk. In brief we will use regex to process all the wikipedia entries selecting clauses or sentences containing a keyword; 'want', 'wish' or 'desire' and equivalents for others tenses/persons. We anticipate hundreds of thousands of instances of such text in Wikipedia. Having acquired all instances of clauses or sentences including those words, how should this data be analysed?</p>
-<h3 id="Approach-1">Approach 1<a class="anchor-link" href="#Approach-1">&#182;</a></h3><ul>
+<h2 id="Not-a-Simple-Clustering-Problem">Not a Simple Clustering Problem<a class="anchor-link" href="#Not-a-Simple-Clustering-Problem">&#182;</a></h2><p>As a data scientist it is worth having some background knowledge about how psychology and philosophy professionals approach desire. Wikipedia has an excellent introduction at <a href="https://en.wikipedia.org/wiki/Desire">https://en.wikipedia.org/wiki/Desire</a></p>
+<p>Reading the article quickly highlights some analogies with data science. The basic classification of desire into ‘Action’, ‘Pleasure’ and ‘Value’ is reminiscent of Reinforcement Learning with its Action, Value and Quality (Q learning) approach.</p>
+<p>It is also interesting to note that psychologists may not classify desire as an emotion. Emotions are often presented on Plutchik’s wheel of emotion, which is then elaborated upon with Plutchik’s dyads. The dyads illustrate how basic emotions are mixed to form more complex emotions, like a colour wheel. Yet, desire is not amongst any of those basic emotions or their various combinations, instead desire has been called a ‘ur-emotion’. Frijda and Parrott in 2011 wrote “…ur-emotions [are] the functionally central underlying processes of action readiness, which are not emotions at all. We propose that what is basic and universal in emotions are …states of action readiness, themselves variants of motive states to relate or not relate with the world and with oneself. Unlike emotions, ur-emotions can be held to be universal and biologically based.”</p>
+<p>That statement needs to be unpacked and much of the Wikipedia entry on desire is concerned with the various classifications of desire which aid either psychological or philosophical analysis. It is important to note that the investigation detailed in this paper will not test for any of these classes of desires, no preconceptions of classification will be presented to the algorithm at all. The objective is for the data to speak for itself.
+However, the analysis will be concerned with how a classification algorithm can be tuned to find themes of desire, not topics of desire. Topic modelling is a well developed subject with many tools available to us, but consider how such an algorithm would group (i.e. cluster) the following statements:</p>
+<ul>
+<li>I want to become a professional football player</li>
+<li>I want to be qualified as an aircraft pilot</li>
+<li>I want to keep the football for myself</li>
+<li>I want to fly the aircraft solo</li>
+</ul>
+<p>A topic modelling tool, particularly if base don word frequency, would almost certainly find two clusters; football and aircraft. What are the chances that the tool would instead find clusters for ambition and possessiveness? The clues are there but the signal from the topics is surely stronger.</p>
+<p>Peter Turney, an NLP researcher, writes, “Relational similarity is correspondence between relations, in contrast with attributional similarity”. Relational similarity, which Mr Turney also calls ‘semantic similarity’, is the problem faced in this analysis.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Summary-of-Results">Summary of Results<a class="anchor-link" href="#Summary-of-Results">&#182;</a></h2><p>The results of this analysis are discussed at the end of this paper. In summary, the following clusters are found for sentences and clauses in Wikipedia containing the words 'want', 'wanted' or 'wants'. This represents the automated clustering of over 180,000 such sentences. The algorithm confidently assigned 73% i.e. 130,000+ of those sentences to a cluster. It was unable to confidently place the remainder in any single cluster. The clusters were independently found by the clustering algorithm, it was not told how many clusters to seek.</p>
+<ul>
+<li>Desire for emotional connection </li>
+<li>Desire for emotional distance</li>
+<li>Desire for affiliation with a group</li>
+<li>Desire for an end to affiliation</li>
+<li>Wishes negotiated between parties</li>
+<li>Obstinacy in relationships</li>
+<li>Desires about other's perspectives</li>
+<li>Desire to win authority via allies</li>
+<li>Desire to impose authority over territory</li>
+<li>Desire to impose authority over others</li>
+<li>Desire for control</li>
+<li>Desire for independence</li>
+</ul>
+<p>The above descriptions of each cluster are, of course, just summaries formed from small selections of sentences at the heart of each cluster. If we could travel across a cluster and take samples at regular intervals then possibly we would observe these central themes morphing into something more generic and then into the theme of a neighbouring cluster. Alternatively, we might observe very little and find it difficult to follow the algorithm's clustering the further we get from the densest part of each cluster. This is work yet to be done.</p>
+<p>We may have expected to find variations on Russell's proposed desires; ambition, acquisitiveness, vanity etc and to some extent we can see those in the above clusters. However, we also see a unifying theme to these clusters. They are all desires defined by our relationships with each other. They are not driven by objects or objectives, other than the objective of being relevant to each other. Some clusters focus on our relationships in large groups (teams, governments), others focus on our relationships in small groups (friends, family), but all are motivations defined by ourselves within a group.</p>
+<p>This is a fascinating and even rather beautiful outcome, albeit constrained by the limits of this anlaysis, which are discussed at the end of the paper.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Approaches">Approaches<a class="anchor-link" href="#Approaches">&#182;</a></h2><p>The first step will be acquire the data, which is a cleaned up version of the entirety of wikipedia from a snapshot made in 2014. This is a standard dataset available form Huggingface and used in many data science models. Using wikipedia means we will get a narrative of history, which is our and Russell's interest, as opposed to personal concerns which would be found in social media. The 'BookCorpus' of literature, also available from Huggingface, is an interesting alternative but is not investigated here.</p>
+<p>We will then use regex to process the wikipedia entries, selecting clauses or sentences containing one of these keywords; 'want', 'wish' or 'desire' or their equivalents for other tenses/person (wanted, wished, etc). We anticipate hundreds of thousands of instances of such text in Wikipedia. Having acquired all instances of clauses or sentences including those words, how should this data be analysed?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Approach-1">Approach 1<a class="anchor-link" href="#Approach-1">&#182;</a></h3><p>Transformers are the most powerful NLP tool currently available. OpenAI's famous GPT-3 is based on a Transformer. They can be used to convert text into a numeric format which can then be analysed with statistical tools. This numeric format is simply a vector per word, called an 'embedding'.</p>
+<p>Google's BERT, originally released in 2018, has become a succesful and standard approach for many NLP applications. ALBERT is a simplified version of BERT, easier to run on a desktop PC, but still highly effective. All BERT and ALBERT word embeddings are contextual, meaning the vector assigned to a each word in each sentence is unique and depends on its context. So, the embedding for 'want' is unique in each sentence and will reflect the context in which it is used. This 'contextual' aspect may be useful when seeking relational similarities, so this is our first approach:</p>
+<ul>
 <li>Acquire sentence embeddings<ul>
-<li>Taken from a standard transformer, such as Huggingface's ALBERT, and then averaged across all tokens</li>
+<li>Taken from a standard transformer, such as Huggingface's ALBERT, and then averaged across the word tokens in each sentence to give us an embedding for each sentence</li>
 <li>Or use the sentence embeddings given by a tool dedicated to creating such embeddings, such as SBERT</li>
 </ul>
 </li>
@@ -14312,11 +14360,11 @@ a.anchor-link {
 </li>
 <li>Analyse the clusters<ul>
 <li>By visual inspection to see what similarities sentences in each cluster share</li>
-<li>By using topic modelling tools such as TF-IDF, to objectively summarise each cluster</li>
+<li>By using topic modelling tools such as TF-IDF, to identify whether clusters have formed around topics or relational similarities</li>
 </ul>
 </li>
 </ul>
-<p>If this approach yields convincing results, then investigation can cease. However, the concern is that averaging transformer embeddings for each token in a sentence will encourage clusters to form around similarity of attributes, rather than similarity of relationships, ie topic clustering not semantic clustering. For example, clusters would form around desires with respect to music, politics or family. whereas we seek desires such as ambition, which are agnostic to the setting in which they are found. TF-IDF is a word frequency measure, so can be used to characterise clusters by how dominated they are by a given attribute or topic.</p>
+<p>If this approach yields convincing results, then investigation can cease. However, the concern is that averaging transformer embeddings for each token in a sentence will encourage clusters to form around similarity of attributes, rather than similarity of relationships, ie topic clustering not semantic clustering. For example, clusters would form around desires with respect to music, politics or family. Whereas we seek desires such as ambition, which are agnostic to the setting in which they are found. TF-IDF is a word frequency measure, so can be used to characterise clusters by how dominated they are by a given attribute or topic.</p>
 <p>BERT transformer embeddings contain a lot of information and have 768 dimensions. Therefore, the code in this approach is dominated by the need for appropriate data compression.</p>
 
 </div>
@@ -14360,16 +14408,21 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Acquiring-the-Data">Acquiring the Data<a class="anchor-link" href="#Acquiring-the-Data">&#182;</a></h2><p>The following code chunks will be concerned with downloading the Wikipedia data and extracting the clauses required for this investigation.</p>
-<p>As a aside, it should be noted that there is an 'analogy' dataset already available from Google:</p>
+<h2 id="Acquiring-the-Data">Acquiring the Data<a class="anchor-link" href="#Acquiring-the-Data">&#182;</a></h2><p>The following code chunks will be concerned with downloading the Wikipedia data, Wiki40b, and extracting the clauses required for this investigation. This data can be found at:</p>
+<ul>
+<li><a href="https://huggingface.co/datasets/wiki40b">https://huggingface.co/datasets/wiki40b</a></li>
+</ul>
+<p>As an aside, it should be noted that there is an 'analogy' dataset already available from Google:</p>
 <ul>
 <li><a href="https://aclweb.org/aclwiki/Google_analogy_test_set_(State_of_the_art">https://aclweb.org/aclwiki/Google_analogy_test_set_(State_of_the_art</a>)</li>
 <li><a href="http://download.tensorflow.org/data/questions-words.txt">http://download.tensorflow.org/data/questions-words.txt</a></li>
 </ul>
-<p>However, this a word analogy dataset, not a sentence analogy dataset. Furthermore, it is focussed on syntactic analogies, not the semantic analogies we seek. For example:
-    London is to England as Rome is to Italy
-    Cheerful is to cheerfully as free is to freely</p>
-<p>This dataset has been reviewed but is not of use to this project. Interestingly, if this project is successful in finding analogies within sentences then it may usefully provide a new set of training set for analogies.</p>
+<p>However, this a word analogy dataset, not a sentence analogy dataset. Furthermore, it is focussed on syntactic analogies, not the semantic analogies we seek. For example:</p>
+<ul>
+<li>London is to England as Rome is to Italy</li>
+<li>Cheerful is to cheerfully as free is to freely</li>
+</ul>
+<p>This analogy dataset has been reviewed but is not of use to this project. Interestingly, if this project is successful in finding relational similarities within sentences then it may usefully provide a new set of training set for analogies for relational similarities (i.e. analogies).</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14765,9 +14818,9 @@ So, we will extract two data sets. One of the sentences, the other of clauses.</
 
 
 
-<div id="efa202a3-d3e3-424c-9042-a69997a5f0ad" class="jupyter-widgets jp-OutputArea-output ">
+<div id="67c7c768-e679-492b-af08-6c8b7c9ee9ea" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('efa202a3-d3e3-424c-9042-a69997a5f0ad');
+var element = document.getElementById('67c7c768-e679-492b-af08-6c8b7c9ee9ea');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "b606141f13c14dd5bcd0915da5b8fe4a", "version_major": 2, "version_minor": 0}
@@ -15257,9 +15310,9 @@ Processing:  sentences_train.csv
 
 
 
-<div id="137a2490-3903-4422-9c02-bc586a6a9e51" class="jupyter-widgets jp-OutputArea-output ">
+<div id="7d5bd6b1-ce59-426a-9dfe-afee5cf7afca" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('137a2490-3903-4422-9c02-bc586a6a9e51');
+var element = document.getElementById('7d5bd6b1-ce59-426a-9dfe-afee5cf7afca');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "23cfa8e0bdfb4c628ca483bfc9ba6a6a", "version_major": 2, "version_minor": 0}
@@ -15294,9 +15347,9 @@ Processing:  sentences_testi.csv
 
 
 
-<div id="d1f7d0c8-b9a4-472b-aaf7-bd99735c962a" class="jupyter-widgets jp-OutputArea-output ">
+<div id="c0022e81-843b-44e5-85cf-2ddc73a187c8" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('d1f7d0c8-b9a4-472b-aaf7-bd99735c962a');
+var element = document.getElementById('c0022e81-843b-44e5-85cf-2ddc73a187c8');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a62723503e004560bbd5de9500208ab6", "version_major": 2, "version_minor": 0}
@@ -15331,9 +15384,9 @@ Processing:  sentences_valid.csv
 
 
 
-<div id="f3c5345b-994d-4f72-8ede-2c71d1f37502" class="jupyter-widgets jp-OutputArea-output ">
+<div id="3fcbd398-5884-4da8-8cac-3a0a871f37ab" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('f3c5345b-994d-4f72-8ede-2c71d1f37502');
+var element = document.getElementById('3fcbd398-5884-4da8-8cac-3a0a871f37ab');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a88e4aabbae14de588e48af1fc05a3d9", "version_major": 2, "version_minor": 0}
@@ -16717,9 +16770,9 @@ Example, fist ten values of a searchword embedding
 
 
 
-<div id="e1c016e3-e714-4021-963c-946efadb7aa6" class="jupyter-widgets jp-OutputArea-output ">
+<div id="78e19f93-0da9-4d32-b213-116aa1e5ec44" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('e1c016e3-e714-4021-963c-946efadb7aa6');
+var element = document.getElementById('78e19f93-0da9-4d32-b213-116aa1e5ec44');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "caf30e1a18e54b5e8b6258a1679877a0", "version_major": 2, "version_minor": 0}
@@ -16751,9 +16804,9 @@ var element = document.getElementById('e1c016e3-e714-4021-963c-946efadb7aa6');
 
 
 
-<div id="f500235f-f9cd-4c17-8787-e0e6a324a947" class="jupyter-widgets jp-OutputArea-output ">
+<div id="0388f82c-a076-42fd-8483-b55a8aac39e1" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('f500235f-f9cd-4c17-8787-e0e6a324a947');
+var element = document.getElementById('0388f82c-a076-42fd-8483-b55a8aac39e1');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "f156ff7e71264806b63efe3406053b52", "version_major": 2, "version_minor": 0}
@@ -16785,9 +16838,9 @@ var element = document.getElementById('f500235f-f9cd-4c17-8787-e0e6a324a947');
 
 
 
-<div id="cf30ecec-a3a8-48e0-8f4c-d11f4fa5b59b" class="jupyter-widgets jp-OutputArea-output ">
+<div id="ecf9c6de-53a1-4c58-a918-7bb16691ecea" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('cf30ecec-a3a8-48e0-8f4c-d11f4fa5b59b');
+var element = document.getElementById('ecf9c6de-53a1-4c58-a918-7bb16691ecea');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "8476d9701b414e029a4ba7e5091f9608", "version_major": 2, "version_minor": 0}
@@ -17467,9 +17520,9 @@ The QQ plot and histogram show the YJ transform to be successful, at least to th
 
 
 
-<div id="94bbc5cd-3ee9-4741-9d7d-25c213198fb3" class="jupyter-widgets jp-OutputArea-output ">
+<div id="edf9942b-4fa3-4aba-a101-b005d04f7fda" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('94bbc5cd-3ee9-4741-9d7d-25c213198fb3');
+var element = document.getElementById('edf9942b-4fa3-4aba-a101-b005d04f7fda');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "808601b8d7d34b8dafee96be5da4cd7f", "version_major": 2, "version_minor": 0}
@@ -17489,9 +17542,9 @@ var element = document.getElementById('94bbc5cd-3ee9-4741-9d7d-25c213198fb3');
 
 
 
-<div id="b2b1c36a-6018-486f-8a68-67a41273367d" class="jupyter-widgets jp-OutputArea-output ">
+<div id="95ef2ce4-b9e9-4f2c-b95a-7c8aee2c0148" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('b2b1c36a-6018-486f-8a68-67a41273367d');
+var element = document.getElementById('95ef2ce4-b9e9-4f2c-b95a-7c8aee2c0148');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "c3fd0918e66a4045aaa45e5c0c431186", "version_major": 2, "version_minor": 0}
@@ -17511,9 +17564,9 @@ var element = document.getElementById('b2b1c36a-6018-486f-8a68-67a41273367d');
 
 
 
-<div id="5d6d5ac4-edaf-4f5f-963b-08fa7fff4ecb" class="jupyter-widgets jp-OutputArea-output ">
+<div id="c4406dfe-fa59-4e42-ad83-db98fefcafe3" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('5d6d5ac4-edaf-4f5f-963b-08fa7fff4ecb');
+var element = document.getElementById('c4406dfe-fa59-4e42-ad83-db98fefcafe3');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "1570bbe4bbc5484db78cb2594fae4908", "version_major": 2, "version_minor": 0}
@@ -18565,9 +18618,9 @@ Experiment name : embedding-wants-autoenc-hyperdrive
 
 
 
-<div id="f247af00-5bf1-4b4c-af5b-ea6359b7e97f" class="jupyter-widgets jp-OutputArea-output ">
+<div id="214a632c-283d-49f8-acf1-b8331e3d4b19" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('f247af00-5bf1-4b4c-af5b-ea6359b7e97f');
+var element = document.getElementById('214a632c-283d-49f8-acf1-b8331e3d4b19');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "dc4170515e4144db87ed0dc483d8e695", "version_major": 2, "version_minor": 0}
@@ -20309,9 +20362,9 @@ Minimum number of nodes requested have been provisioned
 
 
 
-<div id="063d46d9-a7e5-4ac0-a2cd-b9b374b3fed6" class="jupyter-widgets jp-OutputArea-output ">
+<div id="116cc5ad-e6c9-475e-9ace-f78b99fbbb45" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('063d46d9-a7e5-4ac0-a2cd-b9b374b3fed6');
+var element = document.getElementById('116cc5ad-e6c9-475e-9ace-f78b99fbbb45');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "03ea330aa15b4f3b939ff057ef212c39", "version_major": 2, "version_minor": 0}
