@@ -14305,7 +14305,7 @@ However, the analysis will be concerned with how a classification algorithm can 
 <li>I want to keep the football for myself</li>
 <li>I want to fly the aircraft solo</li>
 </ul>
-<p>A topic modelling tool, particularly if base don word frequency, would almost certainly find two clusters; football and aircraft. What are the chances that the tool would instead find clusters for ambition and possessiveness? The clues are there but the signal from the topics is surely stronger.</p>
+<p>A topic modelling tool, particularly if based on word frequency, would almost certainly find two clusters; football and aircraft. What are the chances that the tool would instead find clusters for ambition and possessiveness? The clues are there but the signal from the topics is surely stronger.</p>
 <p>Peter Turney, an NLP researcher, writes, “Relational similarity is correspondence between relations, in contrast with attributional similarity”. Relational similarity, which Mr Turney also calls ‘semantic similarity’, is the problem faced in this analysis.</p>
 
 </div>
@@ -14318,6 +14318,7 @@ However, the analysis will be concerned with how a classification algorithm can 
 <li>Desire for emotional distance</li>
 <li>Desire for affiliation with a group</li>
 <li>Desire for an end to affiliation</li>
+<li>Desire for togetherness</li>
 <li>Wishes negotiated between parties</li>
 <li>Obstinacy in relationships</li>
 <li>Desires about other's perspectives</li>
@@ -14328,7 +14329,7 @@ However, the analysis will be concerned with how a classification algorithm can 
 <li>Desire for independence</li>
 </ul>
 <p>The above descriptions of each cluster are, of course, just summaries formed from small selections of sentences at the heart of each cluster. If we could travel across a cluster and take samples at regular intervals then possibly we would observe these central themes morphing into something more generic and then into the theme of a neighbouring cluster. Alternatively, we might observe very little and find it difficult to follow the algorithm's clustering the further we get from the densest part of each cluster. This is work yet to be done.</p>
-<p>We may have expected to find variations on Russell's proposed desires; ambition, acquisitiveness, vanity etc and to some extent we can see those in the above clusters. However, we also see a unifying theme to these clusters. They are all desires defined by our relationships with each other. They are not driven by objects or objectives, other than the objective of being relevant to each other. Some clusters focus on our relationships in large groups (teams, governments), others focus on our relationships in small groups (friends, family), but all are motivations defined by ourselves within a group.</p>
+<p>We may have expected to find variations on Russell's proposed desires; ambition, acquisitiveness, vanity etc and to some extent we can see those in the above clusters. However, we also see a unifying theme to these clusters. They are all desires defined by our relationships with each other. They are not driven by objects or objectives, other than the objective of being relevant to each other. Some clusters focus on our relationships in large groups (teams, governments), e.g. affiliations. Others focus on our relationships in small groups (friends, family), e.g. togetherness. But all are motivations defined by ourselves within a group.</p>
 <p>This is a fascinating and even rather beautiful outcome, albeit constrained by the limits of this anlaysis, which are discussed at the end of the paper.</p>
 
 </div>
@@ -14818,9 +14819,9 @@ So, we will extract two data sets. One of the sentences, the other of clauses.</
 
 
 
-<div id="67c7c768-e679-492b-af08-6c8b7c9ee9ea" class="jupyter-widgets jp-OutputArea-output ">
+<div id="00790fea-b50d-4600-bf1f-48fa2e821067" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('67c7c768-e679-492b-af08-6c8b7c9ee9ea');
+var element = document.getElementById('00790fea-b50d-4600-bf1f-48fa2e821067');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "b606141f13c14dd5bcd0915da5b8fe4a", "version_major": 2, "version_minor": 0}
@@ -15310,9 +15311,9 @@ Processing:  sentences_train.csv
 
 
 
-<div id="7d5bd6b1-ce59-426a-9dfe-afee5cf7afca" class="jupyter-widgets jp-OutputArea-output ">
+<div id="a46d2387-69c3-44e6-9b37-1418b9713e2b" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('7d5bd6b1-ce59-426a-9dfe-afee5cf7afca');
+var element = document.getElementById('a46d2387-69c3-44e6-9b37-1418b9713e2b');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "23cfa8e0bdfb4c628ca483bfc9ba6a6a", "version_major": 2, "version_minor": 0}
@@ -15347,9 +15348,9 @@ Processing:  sentences_testi.csv
 
 
 
-<div id="c0022e81-843b-44e5-85cf-2ddc73a187c8" class="jupyter-widgets jp-OutputArea-output ">
+<div id="8a0980ef-d7b8-4a88-97f4-51ce6d0fdacd" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('c0022e81-843b-44e5-85cf-2ddc73a187c8');
+var element = document.getElementById('8a0980ef-d7b8-4a88-97f4-51ce6d0fdacd');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a62723503e004560bbd5de9500208ab6", "version_major": 2, "version_minor": 0}
@@ -15384,9 +15385,9 @@ Processing:  sentences_valid.csv
 
 
 
-<div id="3fcbd398-5884-4da8-8cac-3a0a871f37ab" class="jupyter-widgets jp-OutputArea-output ">
+<div id="5c0191b7-3672-42d1-806c-12576a82ff52" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('3fcbd398-5884-4da8-8cac-3a0a871f37ab');
+var element = document.getElementById('5c0191b7-3672-42d1-806c-12576a82ff52');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a88e4aabbae14de588e48af1fc05a3d9", "version_major": 2, "version_minor": 0}
@@ -16770,9 +16771,9 @@ Example, fist ten values of a searchword embedding
 
 
 
-<div id="78e19f93-0da9-4d32-b213-116aa1e5ec44" class="jupyter-widgets jp-OutputArea-output ">
+<div id="ecee2315-4e17-43e9-af05-28f8c704edbc" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('78e19f93-0da9-4d32-b213-116aa1e5ec44');
+var element = document.getElementById('ecee2315-4e17-43e9-af05-28f8c704edbc');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "caf30e1a18e54b5e8b6258a1679877a0", "version_major": 2, "version_minor": 0}
@@ -16804,9 +16805,9 @@ var element = document.getElementById('78e19f93-0da9-4d32-b213-116aa1e5ec44');
 
 
 
-<div id="0388f82c-a076-42fd-8483-b55a8aac39e1" class="jupyter-widgets jp-OutputArea-output ">
+<div id="99d48d27-4893-4266-842a-ea274915bc0e" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('0388f82c-a076-42fd-8483-b55a8aac39e1');
+var element = document.getElementById('99d48d27-4893-4266-842a-ea274915bc0e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "f156ff7e71264806b63efe3406053b52", "version_major": 2, "version_minor": 0}
@@ -16838,9 +16839,9 @@ var element = document.getElementById('0388f82c-a076-42fd-8483-b55a8aac39e1');
 
 
 
-<div id="ecf9c6de-53a1-4c58-a918-7bb16691ecea" class="jupyter-widgets jp-OutputArea-output ">
+<div id="cc385bf9-8021-4a77-9ea4-971d01d1fbd8" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('ecf9c6de-53a1-4c58-a918-7bb16691ecea');
+var element = document.getElementById('cc385bf9-8021-4a77-9ea4-971d01d1fbd8');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "8476d9701b414e029a4ba7e5091f9608", "version_major": 2, "version_minor": 0}
@@ -17520,9 +17521,9 @@ The QQ plot and histogram show the YJ transform to be successful, at least to th
 
 
 
-<div id="edf9942b-4fa3-4aba-a101-b005d04f7fda" class="jupyter-widgets jp-OutputArea-output ">
+<div id="037db6a2-0857-4d1f-a006-bdba7dce3ac0" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('edf9942b-4fa3-4aba-a101-b005d04f7fda');
+var element = document.getElementById('037db6a2-0857-4d1f-a006-bdba7dce3ac0');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "808601b8d7d34b8dafee96be5da4cd7f", "version_major": 2, "version_minor": 0}
@@ -17542,9 +17543,9 @@ var element = document.getElementById('edf9942b-4fa3-4aba-a101-b005d04f7fda');
 
 
 
-<div id="95ef2ce4-b9e9-4f2c-b95a-7c8aee2c0148" class="jupyter-widgets jp-OutputArea-output ">
+<div id="e9d517b6-fa63-4e7f-b79a-f64c2ffb1dc0" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('95ef2ce4-b9e9-4f2c-b95a-7c8aee2c0148');
+var element = document.getElementById('e9d517b6-fa63-4e7f-b79a-f64c2ffb1dc0');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "c3fd0918e66a4045aaa45e5c0c431186", "version_major": 2, "version_minor": 0}
@@ -17564,9 +17565,9 @@ var element = document.getElementById('95ef2ce4-b9e9-4f2c-b95a-7c8aee2c0148');
 
 
 
-<div id="c4406dfe-fa59-4e42-ad83-db98fefcafe3" class="jupyter-widgets jp-OutputArea-output ">
+<div id="e9f4cc52-117c-4a8b-9138-9be25c9d5129" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('c4406dfe-fa59-4e42-ad83-db98fefcafe3');
+var element = document.getElementById('e9f4cc52-117c-4a8b-9138-9be25c9d5129');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "1570bbe4bbc5484db78cb2594fae4908", "version_major": 2, "version_minor": 0}
@@ -18618,9 +18619,9 @@ Experiment name : embedding-wants-autoenc-hyperdrive
 
 
 
-<div id="214a632c-283d-49f8-acf1-b8331e3d4b19" class="jupyter-widgets jp-OutputArea-output ">
+<div id="c3c947a5-7460-4b07-a6f1-83b880870d0b" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('214a632c-283d-49f8-acf1-b8331e3d4b19');
+var element = document.getElementById('c3c947a5-7460-4b07-a6f1-83b880870d0b');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "dc4170515e4144db87ed0dc483d8e695", "version_major": 2, "version_minor": 0}
@@ -20362,9 +20363,9 @@ Minimum number of nodes requested have been provisioned
 
 
 
-<div id="116cc5ad-e6c9-475e-9ace-f78b99fbbb45" class="jupyter-widgets jp-OutputArea-output ">
+<div id="a03260c3-675c-474f-902d-205e22dc5ddf" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('116cc5ad-e6c9-475e-9ace-f78b99fbbb45');
+var element = document.getElementById('a03260c3-675c-474f-902d-205e22dc5ddf');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "03ea330aa15b4f3b939ff057ef212c39", "version_major": 2, "version_minor": 0}
@@ -24458,7 +24459,7 @@ clusters_25D_minclustersize_4000_minsamples_1500_want_len24.csv
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[188]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Cluster 4. Hypothesis: Desire for emotional connection**&quot;</span><span class="p">),</span> 
+<div class=" highlight hl-python"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Cluster 4. Hypothesis: Desire for togetherness**&quot;</span><span class="p">),</span> 
                 <span class="n">cluster_examples</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;cluster==4&quot;</span><span class="p">)[[</span><span class="s1">&#39;text&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
@@ -24480,7 +24481,7 @@ clusters_25D_minclustersize_4000_minsamples_1500_want_len24.csv
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output " data-mime-type="text/markdown">
-<p><strong>Cluster 4. Hypothesis: Desire for emotional connection</strong></p>
+<p><strong>Cluster 4. Hypothesis: Desire for togetherness</strong></p>
 
 </div>
 
@@ -25813,7 +25814,7 @@ Cluster  12 :  did people new government use make war work said continue create 
 <li>2 Hypothesis: Desire for group affiliation</li>
 <li>3 Hypothesis: Desire for control</li>
 <li>4 Hypothesis: Wishes negotiated between parties</li>
-<li>5 Hypothesis: Desire for emotional connection</li>
+<li>5 Hypothesis: Desire for togetherness</li>
 <li>6 Hypothesis: Desire for dis-association (opposite of affiliation)</li>
 <li>7 Hypothesis: Desires about other's perspectives</li>
 <li>8 Hypothesis: Desire to impose authority over others</li>
@@ -25824,7 +25825,7 @@ Cluster  12 :  did people new government use make war work said continue create 
 <li>13 Hypothesis: Desire to win authority via allies</li>
 </ul>
 <p>These are, of course, just hypotheses formed from small selections of each cluster, near the centroid of points with highest probability of belonging to the cluster. If we could travel across a cluster and take samples at regular intervals then surely we would observe these central themes morphing into something more generic and then into the theme of a neighbouring cluster.</p>
-<p>We can see the theme to the above themes. They are all desires defined by our relationships with each other, some clusters focus on our relationships in large groups (teams, governments), others focus on our relationships in small groups (friends, family). Unlike the classic desires they are not driven by objects or objectives, other than the objective of being relevant to each other.</p>
+<p>We can see the theme to the above themes. They are all desires defined by our relationships with each other, some clusters focus on our relationships in large groups (teams, governments), for example affiliations. Others focus on our relationships in small groups (friends, family), eg togetherness. Unlike the classic desires they are not driven by objects or objectives, other than the objective of being relevant to each other.</p>
 <p>This is a fascinating and even rather beautiful outcome, albeit constrained by the above queries on robustness.</p>
 
 </div>
