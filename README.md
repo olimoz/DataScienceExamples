@@ -1,4 +1,4 @@
-# Oliver Morris's Data Science Library
+# Oliver's Data Science Library
 
 All code written by Oliver Morris, except where expressly referenced to other authors. 
 These examples show how Deep Learning can be applied to investigate financial and performance management issues in SME's. 
